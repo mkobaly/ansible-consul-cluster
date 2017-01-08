@@ -1,4 +1,8 @@
 ---
+- name: Ensure system directory exists
+  become: yes
+  become_user: root
+  file: path=/usr/lib/systemd/system state=directory
 - name: install systemd service
   become: yes
   become_user: root
